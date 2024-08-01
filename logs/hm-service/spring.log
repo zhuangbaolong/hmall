@@ -1,0 +1,30 @@
+11:18:15:233  INFO 17804 --- [main] com.hmall.HMallApplication               : Starting HMallApplication using Java 17.0.10 on DESKTOP-B008HTL with PID 17804 (F:\workspace\java\redis\hmall\hmall\hm-service\target\classes started by 32944 in F:\workspace\java\redis\hmall\hmall)
+11:18:15:237 DEBUG 17804 --- [main] com.hmall.HMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
+11:18:15:237  INFO 17804 --- [main] com.hmall.HMallApplication               : The following 1 profile is active: "local"
+11:18:16:165  INFO 17804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+11:18:16:167  INFO 17804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+11:18:16:188  INFO 17804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+11:18:16:595  INFO 17804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+11:18:16:601  INFO 17804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+11:18:16:602  INFO 17804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+11:18:16:686  INFO 17804 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+11:18:16:686  INFO 17804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1417 ms
+11:18:17:693  INFO 17804 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+11:18:17:992  INFO 17804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+11:18:17:993  INFO 17804 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+11:18:17:995  INFO 17804 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+11:18:18:014  INFO 17804 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+11:18:18:128  INFO 17804 --- [main] com.hmall.HMallApplication               : Started HMallApplication in 3.168 seconds (JVM running for 6.451)
+11:18:49:985  INFO 17804 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:18:49:985  INFO 17804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+11:18:49:986  INFO 17804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+11:18:50:068  INFO 17804 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+11:18:50:274  INFO 17804 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+11:18:50:280 DEBUG 17804 --- [http-nio-8080-exec-1] c.h.m.ItemMapper.selectPage_mpCount      : ==>  Preparing: SELECT COUNT(*) FROM item
+11:18:50:301 DEBUG 17804 --- [http-nio-8080-exec-1] c.h.m.ItemMapper.selectPage_mpCount      : ==> Parameters: 
+11:18:50:625 DEBUG 17804 --- [http-nio-8080-exec-1] c.h.m.ItemMapper.selectPage_mpCount      : <==      Total: 1
+11:18:50:632 DEBUG 17804 --- [http-nio-8080-exec-1] com.hmall.mapper.ItemMapper.selectPage   : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item ORDER BY update_time DESC LIMIT ?
+11:18:50:633 DEBUG 17804 --- [http-nio-8080-exec-1] com.hmall.mapper.ItemMapper.selectPage   : ==> Parameters: 20(Long)
+11:18:50:731 DEBUG 17804 --- [http-nio-8080-exec-1] com.hmall.mapper.ItemMapper.selectPage   : <==      Total: 20
+11:19:14:133  INFO 17804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+11:19:14:155  INFO 17804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
