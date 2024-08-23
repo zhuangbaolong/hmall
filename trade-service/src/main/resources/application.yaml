@@ -6,6 +6,11 @@ hm:
   swagger:
     title: "交易服务接口文档"
     package: com.hmall.trade.controller
+feign:
+  okhttp:
+    enabled: true # 开启OKHttp连接池支持
+  sentinel:
+    enabled: true # 开启Feign对Sentinel的整合
 spring:
   rabbitmq:
     host: 192.168.88.130

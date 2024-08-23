@@ -24,6 +24,10 @@ import java.util.List;
 @Service
 public class ItemServiceImpl extends ServiceImpl<ItemMapper, Item> implements IItemService {
 
+    /**
+     * 扣减库存
+     * @param items
+     */
     @Override
     @Transactional
     public void deductStock(List<OrderDetailDTO> items) {
